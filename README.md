@@ -25,11 +25,21 @@ Go to the project directory
  ```
 
 ```bash
-    php artisan artisan migrate:fresh --seed
+    php artisan  migrate:fresh --seed
+```
+```bash
+    npm install
+```
+```bash
+    npm run dev
+```
+```bash
+    php artisan serve
 ```
 
-
 #### Login
+
+To access login page, go to ```http://127.0.0.1:8000/login``` or ```localhost/TravelLokal/login```
 
 -   email = admin@admin.com
 -   password = 123
