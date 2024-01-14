@@ -21,9 +21,9 @@ Go to the project directory
  If there is an error because of ```laravel/ui``` package 
 
  ```bash 
- composer require laravel/ui
+     composer require laravel/ui
  ```
-
+Migrate the database
 ```bash
     php artisan  migrate:fresh --seed
 ```
@@ -33,6 +33,7 @@ Go to the project directory
 ```bash
     npm run dev
 ```
+Run the web application
 ```bash
     php artisan serve
 ```
