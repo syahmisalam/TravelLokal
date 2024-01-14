@@ -18,7 +18,7 @@ class GalleryController extends Controller
     {
         if($request->validated()){
             $images = $request->file('images')->store(
-                'travel_package/gallery', 'public'
+                'storage/travel_package/gallery', 'public'
             );
             Gallery::create($request->except('images') + ['images' => $images,'travel_package_id' => $travel_package->id]);
         }

@@ -8,7 +8,7 @@
             <!--========== ISLANDS 1 ==========-->
             <section class="islands">
                 <img
-                    src="{{ asset('frontend/assets/img/hero.jpg') }}"
+                    src="{{ asset('frontend/assets/img/KLCC.jpg') }}"
                     alt=""
                     class="islands__bg"
                 />
