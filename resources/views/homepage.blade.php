@@ -38,7 +38,7 @@
 </section>
 
 <!--==================== LOGOS ====================-->
-<section
+{{-- <section
     class="logos"
     style="margin-top: 9rem; padding-bottom: 3rem"
 >
@@ -56,7 +56,7 @@
             <img src="{{ asset('frontend/assets/img/airasia.png') }}" alt="" />
         </div>
     </div>
-</section>
+</section> --}}
 
 <!--==================== POPULAR ====================-->
 <section class="section" id="popular">
@@ -80,7 +80,7 @@
                             />
                             <div class="popular__data">
                                 <h2 class="popular__price">
-                                    <span>$</span>{{ number_format($travel_package->price,2) }}
+                                    <span>RM </span>{{ number_format($travel_package->price,2) }}
                                 </h2>
                                 <h3 class="popular__title">
                                     {{ $travel_package->location}}
@@ -213,7 +213,7 @@
 </section>
 
 <!-- blog -->
-<section class="blog section" id="blog">
+{{-- <section class="blog section" id="blog">
     <div class="blog__container container">
         <span class="section__subtitle" style="text-align: center"
             >Our Blog</span
@@ -258,5 +258,5 @@
             @endforeach
         </div>
     </div>
-</section>
+</section> --}}
 @endsection
