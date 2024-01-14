@@ -46,7 +46,7 @@
                 </a>
             </li>
 
-            {{-- <li class="nav-item">
+            <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon"></i>
                     <p>
@@ -61,9 +61,14 @@
                             <p>Category</p>
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a href="{{ route('admin.blogs.index') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Add Blog</p>
+                        </a>
+                    </li>
                 </ul>
-            </li> --}}
+            </li>
         </ul>
     </nav>
     <!-- /.sidebar-menu -->
