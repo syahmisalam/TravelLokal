@@ -43,12 +43,7 @@
                                 <span>Package Travel</span>
                             </a>
                         </li>
-                        <li class="nav__item">
-                            <a href="{{ route('blog.index') }}" class="nav__link {{ request()->is('blogs') || request()->is('blogs/*')  ? ' active-link' : '' }}">
-                                <i class="bx bx-award"></i>
-                                <span>Blog</span>
-                            </a>
-                        </li>
+
                         <li class="nav__item">
                             <a href="{{ route('contact') }}" class="nav__link {{ request()->is('contact') ? ' active-link' : '' }}">
                                 <i class="bx bx-phone"></i>
