@@ -22,12 +22,12 @@
                                 Explore
                             </h2>
                             <h1 class="islands__title">
-                                Wonderfull World
+                                Wonderful Malaysia
                             </h1>
                             <p class="islands__description">
                                 It's the perfect time travel and
                                 enjoy the <br />
-                                beauty of the world.
+                                beauty of Malaysia.
                             </p>
                         </div>
                     </div>

@@ -37,6 +37,9 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('h
 // travel packages
 Route::get('travel-packages',[\App\Http\Controllers\TravelPackageController::class, 'index'])->name('travel_package.index');
 Route::get('travel-packages/{travel_package:slug}',[\App\Http\Controllers\TravelPackageController::class, 'show'])->name('travel_package.show');
+// hotel packages
+Route::get('hotel-packages',[\App\Http\Controllers\HotelPackageController::class, 'index'])->name('hotel_package.index');
+Route::get('hotel-packages/{hotel_package:slug}',[\App\Http\Controllers\HotelPackageController::class, 'show'])->name('hotel_package.show');
 // blogs
 Route::get('blogs', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
 Route::get('blogs/{blog:slug}', [\App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');

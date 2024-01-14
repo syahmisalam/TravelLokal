@@ -19,14 +19,14 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}" />
         @stack('style-alt')
-        <title>Travel Website - ypcode</title>
+        <title>TravelLokal</title>
     </head>
     <body>
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="{{ route('homepage') }}" class="nav__logo"
-                    >G<i class="bx bxs-map"></i> TRAVEL</a
+                    >TraveLokal</a
                 >
 
                 <div class="nav__menu">
@@ -40,7 +40,13 @@
                         <li class="nav__item">
                             <a href="{{ route('travel_package.index') }}" class="nav__link {{ request()->is('travel-packages') || request()->is('travel-packages/*')  ? ' active-link' : '' }}">
                                 <i class="bx bx-building-house"></i>
-                                <span>Package Travel</span>
+                                <span>Travel Packages</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{{ route('hotel_package.index') }}" class="nav__link {{ request()->is('hotel-packages') || request()->is('hotel-packages/*')  ? ' active-link' : '' }}">
+                                <i class="bx bx-building-house"></i>
+                                <span>Hotel</span>
                             </a>
                         </li>
                         {{-- <li class="nav__item">
@@ -75,7 +81,7 @@
             <div class="footer__container container grid">
                 <div>
                     <a href="{{ route('homepage') }}" class="footer__logo">
-                        G<i class="bx bxs-map"></i> TRAVEL
+                        TravelLokal
                     </a>
                     <p class="footer__description">
                         Our vision is to help people find the <br />
@@ -153,7 +159,7 @@
 
             <div class="footer__info container">
                 <span class="footer__copy">
-                    &#169; ypcode. All rigths reserved
+                    &#169; TravelLokal. All rigths reserved
                 </span>
                 <div class="footer__privacy">
                     <a href="#">Terms & Agreements</a>

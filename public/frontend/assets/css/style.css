@@ -89,9 +89,9 @@ body.dark-theme {
   --container-color: hsl(228, 16%, 12%);
 }
 
-/*========== 
-    Color changes in some parts of 
-    the website, in dark theme 
+/*==========
+    Color changes in some parts of
+    the website, in dark theme
 ==========*/
 .dark-theme .swiper-button-next,
 .dark-theme .swiper-button-prev {
@@ -328,7 +328,7 @@ body.dark-theme {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .islands__container {
@@ -338,6 +338,7 @@ body.dark-theme {
   display: -ms-grid;
   display: grid;
   place-items: center;
+
 }
 
 .islands__subtitle,
