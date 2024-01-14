@@ -18,10 +18,16 @@ Go to the project directory
 ```bash
     php artisan key:generate
 ```
+ If there is an error because of ```laravel/ui`` package 
+
+ ```bash 
+ composer require laravel/ui
+ ```
 
 ```bash
     php artisan artisan migrate:fresh --seed
 ```
+
 
 #### Login
 
