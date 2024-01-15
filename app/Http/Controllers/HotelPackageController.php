@@ -9,7 +9,7 @@ class HotelPackageController extends Controller
 {
     public function index()
     {
-        $hotel_packages = HotelPackage::with('galleries')->get();
+        $hotel_packages = HotelPackage::with('hotel_galleries')->get();
 
         return view('hotel_packages.index', compact('hotel_packages'));
     }

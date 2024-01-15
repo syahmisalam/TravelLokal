@@ -23,6 +23,9 @@ Route::group(['middleware' => ['is_admin','auth'], 'prefix' => 'admin', 'as' => 
     // travel packages
     Route::resource('travel_packages', \App\Http\Controllers\Admin\TravelPackageController::class)->except('show');
     Route::resource('travel_packages.galleries', \App\Http\Controllers\Admin\GalleryController::class)->except(['create', 'index','show']);
+        // hote packages
+        Route::resource('hotel_packages', \App\Http\Controllers\Admin\HotelPackageController::class)->except('show');
+        Route::resource('hotel_packages.hotel_galleries', \App\Http\Controllers\Admin\HotelGalleryController::class)->except(['create', 'index','show']);
     // categories
     Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class)->except('show');
     // blogs

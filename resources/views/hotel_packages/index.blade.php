@@ -33,7 +33,7 @@
                 <article class="popular__card">
                 <a href="{{ route('hotel_package.show', $hotel_package->slug) }}">
                     <img
-                    src="{{ Storage::url($travel_package->galleries->first()->images) }}"
+                    src="{{ Storage::url($hotel_package->hotel_galleries->first()->images) }}"
                     alt=""
                     class="popular__img"
                     />

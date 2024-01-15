@@ -45,6 +45,14 @@
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('admin.hotel_packages.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-hotel"></i>
+                    <p>
+                        {{ __('Hotel Package') }}
+                    </p>
+                </a>
+            </li>
 
             <li class="nav-item">
                 <a href="#" class="nav-link">
