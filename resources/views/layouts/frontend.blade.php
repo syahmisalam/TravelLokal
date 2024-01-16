@@ -26,7 +26,7 @@
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="{{ route('homepage') }}" class="nav__logo"
-                    >TraveLokal</a
+                    >TravelLokal</a
                 >
 
                 <div class="nav__menu">
