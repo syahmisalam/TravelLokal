@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 
 Route::group(['middleware' => ['is_admin','auth'], 'prefix' => 'admin', 'as' => 'admin.'], function() {
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
@@ -29,8 +29,8 @@ Route::group(['middleware' => ['is_admin','auth'], 'prefix' => 'admin', 'as' => 
     // categories
     Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class)->except('show');
     // blogs
-    Route::resource('blogs', \App\Http\Controllers\Admin\BlogController::class)->except('show');
-    // profile
+    // Route::resource('blogs', \App\Http\Controllers\Admin\BlogController::class)->except('show');
+    // // profile
     Route::get('users', [\App\Http\Controllers\UserController::class, 'index'])->name('users.index');
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');

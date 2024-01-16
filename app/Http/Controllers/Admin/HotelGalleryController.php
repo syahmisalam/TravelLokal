@@ -18,7 +18,7 @@ class HotelGalleryController extends Controller
     {
         if($request->validated()){
             $images = $request->file('images')->store(
-                'storage/travel_package/gallery', 'public'
+                'hotel_package/gallery', 'public'
             );
             HotelGallery::create($request->except('images') + ['images' => $images,'hotel_package_id' => $hotel_package->id]);
         }
@@ -46,7 +46,7 @@ class HotelGalleryController extends Controller
             if($request->images) {
                 File::delete('storage/'. $hotel_gallery->images);
                 $images = $request->file('images')->store(
-                    'storage/travel_package/gallery', 'public'
+                    'hotel_package/gallery', 'public'
                 );
                 $hotel_gallery->update($request->except('images') + ['images' => $images, 'hotel_package_id' => $hotel_package->id]);
             }else {
@@ -66,7 +66,7 @@ class HotelGalleryController extends Controller
     public function destroy(HotelPackage $hotel_package,HotelGallery $hotel_gallery)
     {
         File::delete('storage/'. $hotel_gallery->images);
-        $gallery->delete();
+        $hotel_gallery->delete();
 
         return redirect()->back()->with([
             'message' => 'Success Deleted !',

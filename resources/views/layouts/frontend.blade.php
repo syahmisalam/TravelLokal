@@ -49,12 +49,7 @@
                                 <span>Hotel</span>
                             </a>
                         </li>
-                        {{-- <li class="nav__item">
-                            <a href="{{ route('blog.index') }}" class="nav__link {{ request()->is('blogs') || request()->is('blogs/*')  ? ' active-link' : '' }}">
-                                <i class="bx bx-award"></i>
-                                <span>Blog</span>
-                            </a>
-                        </li> --}}
+
                         <li class="nav__item">
                             <a href="{{ route('contact') }}" class="nav__link {{ request()->is('contact') ? ' active-link' : '' }}">
                                 <i class="bx bx-phone"></i>
@@ -67,7 +62,7 @@
                 <!-- theme -->
                 <i class="bx bx-moon change-theme" id="theme-button"></i>
 
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=088111444&text=I want to booking" class="button nav__button">Booking Now</a>
+                <a href="{{ route('login') }}" class="button nav__button">Login</a>
             </nav>
         </header>
 
