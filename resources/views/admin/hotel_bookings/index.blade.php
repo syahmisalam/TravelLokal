@@ -30,19 +30,19 @@
                                         <th>Email</th>
                                         <th>Number Phone</th>
                                         <th>Date</th>
-                                        <th>Travel Package</th>
+                                        <th>Hotel Package</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($bookings as $booking)
+                                @foreach($hotel_bookings as $booking)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $booking->name }}</td>
                                         <td>{{ $booking->email }}</td>
                                         <td>{{ $booking->number_phone }}</td>
                                         <td>{{ $booking->date }}</td>
-                                        <td>{{ $booking->travel_package->location }}</td>
+                                        <td>{{ $booking->hotel_package->location }}</td>
                                         <td>
                                             <form onclick="return confirm('are you sure ?');" class="d-inline-block" action="{{ route('admin.hotel_bookings.destroy', [$booking]) }}" method="post">
                                                 @csrf
@@ -58,7 +58,7 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer clearfix">
-                            {{ $bookings->links() }}
+                            {{ $hotel_bookings->links() }}
                         </div>
                     </div>
 

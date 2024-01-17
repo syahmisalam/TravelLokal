@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('admin.bookings.index') }}" class="nav-link">
+                <a href="{{ route('admin.hotel_bookings.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-book"></i>
                     <p>
                         {{ __('Hotel Booking') }}

@@ -13,7 +13,7 @@ class HotelBookingController extends Controller
      */
     public function index()
     {
-        $bookings = HotelBooking::with('hotel_package')->paginate(10);
+        $hotel_bookings = HotelBooking::with('hotel_package')->paginate(10);
 
         return view('admin.hotel_bookings.index', compact('hotel_bookings'));
     }
