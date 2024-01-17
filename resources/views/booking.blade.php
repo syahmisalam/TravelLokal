@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_customer')
 
 @section('content')
     <!-- Content Header (Page header) -->
@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">{{ __('Users') }}</h1>
+                    <h1 class="m-0">{{ __('Booking') }}</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -27,14 +27,21 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Email</th>
+                                        <th>Travel Package ID</th>
+                                        <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($users as $user)
-                                    <tr>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
-                                    </tr>
+                                @foreach($bookings as $booking)
+
+                                <tr>
+                                    <td>{{ $booking->name }}</td>
+                                    <td>{{ $booking->email }}</td>
+                                    <td>{{ $booking->travel_package_id }}</td>
+                                    <td>{{ $booking->date }}</td>
+                                </tr>
+
+
                                 @endforeach
                                 </tbody>
                             </table>
@@ -42,7 +49,7 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer clearfix">
-                            {{ $users->links() }}
+                            {{ $bookings->links() }}
                         </div>
                     </div>
 

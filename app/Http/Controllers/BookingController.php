@@ -8,6 +8,7 @@ use App\Http\Requests\BookingRequest;
 
 class BookingController extends Controller
 {
+
     public function store(BookingRequest $request)
     {
         Booking::create($request->validated());

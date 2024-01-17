@@ -61,8 +61,14 @@
 
                 <!-- theme -->
                 <i class="bx bx-moon change-theme" id="theme-button"></i>
+            @if (Auth::check() && Auth::user()->is_admin)
+                    <a href="{{ route('admin.dashboard') }}" class="button nav__button">Dashboard</a>
+            @elseif (Auth::check())
+                    <a href="{{ route('dashboard') }}" class="button nav__button">Profile</a>
+            @else
+                    <a href="{{ route('login') }}" class="button nav__button">Login</a>
+            @endif
 
-                <a href="{{ route('login') }}" class="button nav__button">Login</a>
             </nav>
         </header>
 
