@@ -61,9 +61,9 @@ class HotelBookingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(HotelBooking $booking)
+    public function destroy(HotelBooking $hotel_booking)
     {
-        $booking->delete();
+        $hotel_booking->delete();
 
         return redirect()->back()->with([
             'message' => 'success deleted !',
