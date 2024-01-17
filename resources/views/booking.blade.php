@@ -33,14 +33,14 @@
                                 </thead>
                                 <tbody>
                                 @foreach($bookings as $booking)
-
+                                @if($booking->name == Auth::user()->name)
                                 <tr>
                                     <td>{{ $booking->name }}</td>
                                     <td>{{ $booking->email }}</td>
                                     <td>{{ $booking->travel_package_id }}</td>
                                     <td>{{ $booking->date }}</td>
                                 </tr>
-
+                                @endif
 
                                 @endforeach
                                 </tbody>

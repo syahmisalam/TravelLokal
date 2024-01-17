@@ -46,6 +46,7 @@
                 <form action="{{ route('booking.store') }}" method="post">
                   @csrf
                   <input type="hidden" name="travel_package_id" value="{{ $travel_package->id }}">
+                  <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                   <input type="hidden" name="name" placeholder="Your Name" value="{{Auth::user()->name}}"/>
                   <input type="hidden" name="email" placeholder="Your Email" value="{{Auth::user()->email}}"/>
                   <input type="number" name="number_phone" placeholder="Your Phone Number" />
