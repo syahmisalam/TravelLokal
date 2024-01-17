@@ -58,7 +58,7 @@
     </div>
 </section> --}}
 
-<!--==================== POPULAR ====================-->
+<!--==================== POPULAR PLACES ====================-->
 <section class="section" id="popular">
     <div class="container">
         <span class="section__subtitle" style="text-align: center"
@@ -86,6 +86,50 @@
                                     {{ $travel_package->location}}
                                 </h3>
                                 <p class="popular__description">{{ $travel_package->type }}</p>
+                            </div>
+                        </a>
+                    </article>
+                @endforeach
+            </div>
+
+            <div class="swiper-button-next">
+                <i class="bx bx-chevron-right"></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class="bx bx-chevron-left"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==================== POPULAR HOTELS ====================-->
+<section class="section" id="popular">
+    <div class="container">
+        <span class="section__subtitle" style="text-align: center"
+            >Best Choice</span
+        >
+        <h2 class="section__title" style="text-align: center">
+            Popular Hotels
+        </h2>
+
+        <div class="popular__container swiper">
+            <div class="swiper-wrapper">
+                @foreach($hotel_packages as $hotel_package)
+                    <article class="popular__card swiper-slide">
+                        <a href="{{ route('hotel_package.show', $hotel_package->slug) }}">
+                            <img
+                                src="{{ Storage::url($hotel_package->hotel_galleries->first()->images) }}"
+                                alt=""
+                                class="popular__img"
+                            />
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    <span>RM </span>{{ number_format($hotel_package->price,2) }}
+                                </h2>
+                                <h3 class="popular__title">
+                                    {{ $hotel_package->location}}
+                                </h3>
+                                <p class="popular__description">{{ $hotel_package->type }}</p>
                             </div>
                         </a>
                     </article>
