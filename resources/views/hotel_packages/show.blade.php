@@ -43,11 +43,12 @@
             <div class="package-travel">
               <h3>Booking Now</h3>
               <div class="card">
-                <form action="{{ route('booking.store') }}" method="post">
+                <form action="{{ route('hotel_booking.store') }}" method="post">
                   @csrf
                   <input type="hidden" name="hotel_package_id" value="{{ $hotel_package->id }}">
-                  <input type="text" name="name" placeholder="Your Name" />
-                  <input type="email" name="email" placeholder="Your Email" />
+                  <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                  <input type="hidden" name="name" placeholder="Your Name" value="{{Auth::user()->name}}"/>
+                  <input type="hidden" name="email" placeholder="Your Email" value="{{Auth::user()->email}}"/>
                   <input type="number" name="number_phone" placeholder="Your Number" />
                   <input
                     placeholder="Pick Your Date"

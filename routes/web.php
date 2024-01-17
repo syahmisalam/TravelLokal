@@ -20,6 +20,8 @@ Route::group(['middleware' => ['is_admin','auth'], 'prefix' => 'admin', 'as' => 
 
     // booking
     Route::resource('bookings', \App\Http\Controllers\Admin\BookingController::class)->only(['index', 'destroy']);
+    // hotel booking
+    Route::resource('hotel_bookings', \App\Http\Controllers\Admin\HotelBookingController::class)->only(['index', 'destroy']);
     // travel packages
     Route::resource('travel_packages', \App\Http\Controllers\Admin\TravelPackageController::class)->except('show');
     Route::resource('travel_packages.galleries', \App\Http\Controllers\Admin\GalleryController::class)->except(['create', 'index','show']);
@@ -46,6 +48,8 @@ Route::get('contact', function() {
 })->name('contact');
 // booking
 Route::post('booking', [App\Http\Controllers\BookingController::class, 'store'])->name('booking.store');
+// hotel booking
+Route::post('hotel_booking', [App\Http\Controllers\HotelBookingController::class, 'store'])->name('hotel_booking.store');
 //customer dashboard
 Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('user', [\App\Http\Controllers\UserController::class, 'customer'])->name('userprofile.index');
