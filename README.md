@@ -28,6 +28,9 @@ Migrate the database
     php artisan  migrate:fresh --seed
 ```
 ```bash
+    php artisan storage:link
+```
+```bash
     npm install
 ```
 ```bash
