@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">{{ __('Travel Booking') }}</h1>
+                    <h1 class="m-0">{{ __('Hotel Booking') }}</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -27,17 +27,17 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Email</th>
-                                        <th>Travel Package ID</th>
+                                        <th>Hotel Package ID</th>
                                         <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($bookings as $booking)
+                                @foreach($hotel_bookings as $booking)
                                 @if($booking->name == Auth::user()->name)
                                 <tr>
                                     <td>{{ $booking->name }}</td>
                                     <td>{{ $booking->email }}</td>
-                                    <td>{{ $booking->travel_package_id }}</td>
+                                    <td>{{ $booking->hotel_package_id }}</td>
                                     <td>{{ $booking->date }}</td>
                                 </tr>
                                 @endif
@@ -49,7 +49,7 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer clearfix">
-                            {{ $bookings->links() }}
+                            {{ $hotel_bookings->links() }}
                         </div>
                     </div>
 
