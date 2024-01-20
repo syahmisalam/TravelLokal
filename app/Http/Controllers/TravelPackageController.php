@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TravelPackage;
+use App\Models\Review;
 
 class TravelPackageController extends Controller
 {
@@ -18,6 +19,9 @@ class TravelPackageController extends Controller
     {
         $travel_packages = TravelPackage::where('id', '!=', $travel_package->id)->get();
 
-        return view('travel_packages.show', compact('travel_package', 'travel_packages'));
+        $reviews = Review::with('user')->get();
+
+        return view('travel_packages.show', compact('travel_package', 'travel_packages', 'reviews'));
+
     }
 }

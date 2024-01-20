@@ -57,5 +57,6 @@ Route::get('profile', [\App\Http\Controllers\CustomerProfileController::class, '
 Route::put('profile', [\App\Http\Controllers\CustomerProfileController::class, 'update'])->name('customer_profile.update');
 Route::get('bookings', [\App\Http\Controllers\CustomerBookingController::class, 'show'])->name('bookings.show');
 Route::get('hotel_bookings', [\App\Http\Controllers\CustomerHotelBookingController::class, 'show'])->name('hotel_bookings.show');
-
+Route::get('reviews', [\App\Http\Controllers\CustomerReviewController::class, 'show'])->name('reviews.show');
+Route::post('reviews', [\App\Http\Controllers\CustomerReviewController::class, 'store'])->name('reviews.store');
 
